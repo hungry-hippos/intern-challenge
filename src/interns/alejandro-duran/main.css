@@ -1,0 +1,90 @@
+body{background: #DBC576;
+    background: -webkit-linear-gradient(bottom right, #DBC576, #e27f2a);
+    background: -moz-linear-gradient(bottom right, #DBC576, #e27f2a);
+    background: linear-gradient(to top left, #DBC576, #e27f2a);
+}
+#holder{width:100%;
+position:relative}
+#leftHalf{position:absolute;
+left:0;
+top:0;
+height:600px;
+width:50%;
+z-index:1;
+box-sizing: border-box;
+background-image: url('./geology.PNG');
+background-size: 700px;
+background-position: 0 -200px;
+border-right: 3px solid #a0632e;
+}
+#name{font-size: 60px;
+    position: absolute;
+    z-index:1;
+    top: 50px;
+    left: 80px;
+    text-align: left;
+    font-family: 'Arvo', serif;
+    line-height: 1.7;
+    text-shadow: 5px 5px #000000, 2px -2px #000000, -2px 2px black, -2px -2px #000000;
+    color: #ffeb3b;
+}
+
+#rightHalf{height:600px;
+width:50%;
+min-width:600px;
+box-sizing: border-box;
+display: inline-block;
+position:absolute;
+right:0;
+top:0;
+z-index:2;
+padding:30px;
+background: #DBC576;
+background: -webkit-linear-gradient(bottom right, #DBC576, #e27f2a);
+background: -moz-linear-gradient(bottom right, #DBC576, #e27f2a);
+background: linear-gradient(to top left, #DBC576, #e27f2a);
+overflow: hidden;
+}
+#archery{background-image: url('./archery.jpg');
+background-size: 120%;
+background-position: -20px 0;
+width:100%;
+height:500px;
+box-sizing: border-box;
+border-radius:15px;
+border:3px solid #b98436;
+box-shadow: 0 0 3px black;
+}
+#pageBody{position:absolute;
+top:480px;
+left:0;
+right:5px;
+height:610px;
+background-color:#e27f2a;
+transition:1s;
+box-shadow: 0 0 5px black;
+background: #FECC85;
+background: -webkit-linear-gradient(top left, #FECC85, #E2802A);
+background: -moz-linear-gradient(top left, #FECC85, #E2802A);
+background: linear-gradient(to bottom right, #FECC85, #E2802A);
+}
+#scrollBar{width:100%;
+text-align: center;
+height:50px;
+font-size:30px;
+}
+#pageText{width:96%;
+margin:5px 2%;
+padding: 5px 20px;
+box-sizing: border-box;
+border-radius: 10px;
+background-color:#dbc576;
+border:3px solid #b98436;
+box-shadow: 0 0 3px black;
+}
+#pageText p{font-size: 15px;}
+.hidden{display:none}
+.arrow{background:black;
+border-radius: 10px;
+box-shadow:0 0 3px rgb(95, 92, 92);
+}
