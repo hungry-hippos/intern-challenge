@@ -8,23 +8,37 @@ const lockState = window.mobx.observable({
 })
 
 function changeDialValue (index, incrementBy) {
-  // This part is missing some code
-  // This function is automatically called when the user clicks on a chevron
-  // it will be called with a wheel index and an amount to change the value by
-  // for example, if a user clicks on the "up" arrow for wheel 0
-  // this will be called with arguments (0, 1) indicating we should raise the first dial's value by one
-  // for example, if the user clicked the "down" arrow for the last wheel
-  // this will be called with arguments (3, -1).
 
-  // to change the state of the lock, simply make a call like
-  // lockState.locked = false
-  // or lockState.wheels[1] = 2
-  // the lock will re-render itself when the value changes
+  //finding new update value, including upper/lower edge cases
+  var currVal=lockState.wheels[index];
+  var newVal=0;
+  if (currVal===9 && incrementBy===1){
+    newVal=0;
+  }else if (currVal===0 && incrementBy===-1){
+    newVal=9;
+  }else{
+    newVal=currVal+incrementBy;
+  }
 
-  // When the lock is set to match the secretCombo
-  // call the redirect() function with your name
-  // eg: redirect('larry-lobster')
-  // the redirect function will only redirect if the lockState is unlocked
+  //updating new val
+  lockState.wheels[index]=newVal;
+  
+  //checking if combo matches secret combo
+  var isLockUnlocked=true;
+  for (var i=0;i<lockState.wheels.length;i++){
+    //only one mismatch needed to fail
+    if (lockState.wheels[i]!==SECRET_COMBO[i]){
+      isLockUnlocked=false;
+      break;
+    }
+  }
+  //updating value
+  lockState.locked=!isLockUnlocked;
+
+  //redirecting if lock is opened
+  if (isLockUnlocked){
+    redirect('alejandro-duran');
+  }
 }
 
 // let our other modules find our functions

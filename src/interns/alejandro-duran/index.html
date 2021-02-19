@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <title>Alejandro Duran</title>
+</head>
+<body>
+    <div id='holder'>
+    <div id='leftHalf'>
+        <div id='name'>
+            ALEJANDRO<br/>
+            DURAN
+        </div>
+    </div>
+    <div id='rightHalf'>
+        <div id='archery' />
+        <div id='pageBody'>
+            <div id='scrollBar'>
+                <svg id='upArrow' xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#DBC576" class="bi arrow bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                    <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+                </svg>
+                <svg id='downArrow' xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#DBC576" class="bi arrow bi-arrow-down-square-fill hidden" viewBox="0 0 16 16">
+                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+                </svg>
+            </div>
+            
+            <div id='pageText'>
+                <h1>About Me</h1>
+                <p>I graduated from USC in 2018 with a bachelors in chemistry. Before committing the next 12 years of my life to medicine, I decided to travel and teach in China. I spent one month in Shanghai and two months in Beijing. It was life changing. I realized that I was a lot more passionate about meeting and connecting with people from all over the world than I was about studying science.</p>
+                <p>I worked odd jobs for a couple years. At a friend's suggestion, I picked up coding during last year's Covid lock-down and began self-teaching. I was surprised how much I enjoyed it. Math, physics, and science have always been my strength, and the logical, technical side of programming just fits me naturally. In addition to enjoying problem-solving and technical challenges, I value the freedom it gives me: being able to work from anywhere around the world with all kinds of people is the key reason I dropped medicine and embraced programming.</p>
+                <p>I would love to learn more about back-end systems during my internship. I am familiar enough with front-end to know my way around it. I want to develop my back-end chops and gain a fuller understanding of APIs, databases, and networks. Please check out my <a href='https://alexdurandev.wordpress.com/portfolio/'>project protfolio</a> and my <a href='https://github.com/hungry-hippos'>GitHub profile!</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    const page=document.getElementById('pageBody');
+    page.addEventListener('mouseenter',()=>{
+        page.style.top='-5px';
+        document.getElementById('upArrow').classList.add('hidden');
+        document.getElementById('downArrow').classList.remove('hidden');
+    })
+    page.addEventListener('mouseleave',()=>{
+        page.style.top='480px';
+        document.getElementById('upArrow').classList.remove('hidden');
+        document.getElementById('downArrow').classList.add('hidden');
+    })
+</script>
+
+</html>
